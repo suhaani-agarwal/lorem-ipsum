@@ -1,8 +1,10 @@
 "use client";
 import { IoIosNotifications } from "react-icons/io";
+import Link from "next/link";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { cn } from "@/lib/utils";
 import React from "react";
+import NavbarAfterLogin from "@/components/navbarAfterLogin";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { WobbleCard } from "@/components/ui/wobble-card";
 import Image from "next/image";
@@ -65,13 +67,14 @@ const words = `Hello Suhaani Agarwal`;
 const page = () => {
   return (
     <div className='relative bg-rose-100 h-full min-h-screen'>
+      <NavbarAfterLogin/>
       <nav className='flex justify-between '>
         <div className='p-3'>
-            <button className='text-2xl font-bold'>SukhSaheli</button>
+            {/* <button className='text-2xl font-bold'>SukhSaheli</button> */}
         </div>
         <div className='flex gap-10 p-3'>
-            <button className='text-2xl font-bold'>Logout</button>
-            <button  className='text-2xl'><IoIosNotifications /></button>
+            {/* <Link href='/'><button className='text-2xl font-bold'>Logout</button></Link>
+            <button  className='text-2xl'><IoIosNotifications /></button> */}
         </div>
       </nav>
 
@@ -85,13 +88,13 @@ const page = () => {
       </div> */}
       <div className="mt-8 flex flex-col items-center gap-4">
         <div className="flex justify-center gap-4">
-          <button className="border-2 border-rose-300 rounded-xl bg-gradient-to-r from-rose-200 to-pink-200 text-xl text-gray-700 font-bold w-64 h-14 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+        <Link href='/host'><button className="border-2 border-rose-300 rounded-xl bg-gradient-to-r from-rose-200 to-pink-200 text-xl text-gray-700 font-bold w-64 h-14 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
             Be the Host
-          </button>
+          </button></Link>
           <div className="relative group">
-            <button className="border-2 border-sky-300 rounded-xl bg-gradient-to-r from-sky-200 to-indigo-200 text-xl text-gray-700 font-bold w-64 h-14 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+          <Link href='/join'><button className="border-2 border-sky-300 rounded-xl bg-gradient-to-r from-sky-200 to-indigo-200 text-xl text-gray-700 font-bold w-64 h-14 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
               Join as a Member
-            </button>
+            </button></Link>
             <div className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
               <button className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Tambola Night</button>
               <button className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Talent Night</button>
@@ -143,6 +146,7 @@ const page = () => {
         </div>
         <div className="lg:w-1/2">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full">
+            <Link href="/sharing">
             <WobbleCard
               containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-400/70 backdrop-blur-sm min-h-[400px] lg:min-h-[250px] transition-all duration-300 hover:shadow-xl hover:scale-105"
               className=""
@@ -158,15 +162,16 @@ const page = () => {
                   Join Anonymous Platform
                 </button>
               </div>
-              <Image
+              {/* <Image
                 src="/housewives-support.webp"
                 width={400}
                 height={400}
                 alt="Housewives support illustration"
                 className="absolute -right-4 lg:-right-[30%] grayscale filter -bottom-8 object-contain rounded-2xl"
-              />
+              /> */}
             </WobbleCard>
-            <WobbleCard containerClassName="col-span-1 min-h-[250px] bg-purple-500/60 backdrop-blur-sm transition-all duration-300 hover:shadow-xl hover:scale-105">
+            </Link>
+            <Link href="/stayUpdated"><WobbleCard containerClassName="col-span-1 min-h-[250px] bg-purple-500/60 backdrop-blur-sm transition-all duration-300 hover:shadow-xl hover:scale-105">
               <h2 className="max-w-60 text-left text-balance text-base md:text-lg lg:text-2xl font-semibold tracking-[-0.015em] text-white">
                 Stay in the Loop
               </h2>
@@ -176,8 +181,8 @@ const page = () => {
               <button className="mt-6 bg-white text-purple-600 font-semibold py-2 px-4 rounded-full hover:bg-purple-100 transition-colors duration-300">
                 Explore Updates
               </button>
-            </WobbleCard>
-            <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-pink-600/70 backdrop-blur-sm min-h-[400px] lg:min-h-[500px] xl:min-h-[250px] transition-all duration-300 hover:shadow-xl hover:scale-105">
+            </WobbleCard></Link>
+            <Link href="/supportAI"><WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-pink-600/70 backdrop-blur-sm min-h-[400px] lg:min-h-[500px] xl:min-h-[250px] transition-all duration-300 hover:shadow-xl hover:scale-105">
               <div className="max-w-xs lg:max-w-sm">
                 <h2 className="max-w-xs md:max-w-md text-left text-balance text-base md:text-lg lg:text-2xl font-semibold tracking-[-0.015em] text-white">
                   Ask Anything: Your Personal AI Companion
@@ -189,14 +194,14 @@ const page = () => {
                   Start Chatting Now
                 </button>
               </div>
-              <Image
+              {/* <Image
                 src="/ai-companion.webp"
                 width={400}
                 height={400}
                 alt="AI companion illustration"
                 className="absolute -right-8 md:-right-[30%] lg:-right-[15%] -bottom-8 object-contain rounded-2xl"
-              />
-            </WobbleCard>
+              /> */}
+            </WobbleCard></Link>
           </div>
         </div>
         <div className="lg:w-1/4 bg-gradient-to-br from-cyan-400/60 to-blue-500/60 rounded-2xl p-6 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl hover:scale-105">

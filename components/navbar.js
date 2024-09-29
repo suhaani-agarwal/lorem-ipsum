@@ -19,7 +19,7 @@ const Navbar = () => {
               className={cn(
                 "px-3 py-2 rounded-md text-sm font-medium",
                 "text-gray-700 hover:text-gray-900 hover:bg-gray-100",
-                "dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700"
+                "dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700 text-xl"
               )}
             >
              

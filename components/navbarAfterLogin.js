@@ -10,7 +10,7 @@ const NavbarAfterLogin = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link href="/" className="text-2xl font-bold text-rose-500 dark:text-rose-400">
-              EmpowerHer
+              Sukh Saheli
             </Link>
           </div>
           <div className="flex items-center space-x-4">
@@ -19,7 +19,7 @@ const NavbarAfterLogin = () => {
               className={cn(
                 "px-3 py-2 rounded-md text-sm font-medium",
                 "text-gray-700 hover:text-gray-900 hover:bg-gray-100",
-                "dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700"
+                "dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700 text-xl"
               )}
             >
               Dashboard
