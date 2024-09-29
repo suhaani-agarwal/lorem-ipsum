@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        {/* <script src="https://widget.cxgenie.ai/widget.js" data-aid="65e61a85-67ad-4e28-9c4b-dcb5f69faa78" data-lang="en"></script> */}
       </body>
     </html>
   );
